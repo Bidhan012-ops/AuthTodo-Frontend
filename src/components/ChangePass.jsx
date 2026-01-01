@@ -22,7 +22,7 @@ const ChangePass = () => {
       confirmpassword: confirmpassword
     }
     try {
-      const responce = await fetch(`${BASE_URL}/resetPassword/${userEmail}`, {
+      const responce = await fetch(`${BASE_URL}/users/resetPassword/${userEmail}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
