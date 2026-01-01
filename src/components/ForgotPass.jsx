@@ -1,36 +1,36 @@
-import React, { useRef,useContext, useEffect, useState } from "react";
+import React, { useRef, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../store/userContext";
- const BASE_URL = import.meta.env.VITE_BASE_URL;
- import ErrorComponent from "./ErrorComponent";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+import ErrorComponent from "./ErrorComponent";
 const ForgotPass = () => {
-    const navigate=useNavigate();
-    const usercontest=useContext(UserContext);
+  const navigate = useNavigate();
+  const usercontest = useContext(UserContext);
   const emailref = useRef(null);
-  const [error,seterror]=useState("");
-   const handleonclick = async () => {
+  const [error, seterror] = useState("");
+  const handleonclick = async () => {
     const email = emailref.current.value;
     try {
-        const response = await fetch(`${BASE_URL}/forgetPassword`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email })
-        });
-        const result = await response.json();
-        console.log(result);
-        if (result.success) {
-            alert("OTP sent successfully!");
-            usercontest.setemail(email);
-            navigate("/Varifyotp")
+      const response = await fetch(`${BASE_URL}/users/forgetPassword`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+      });
+      const result = await response.json();
+      console.log(result);
+      if (result.success) {
+        alert("OTP sent successfully!");
+        usercontest.setemail(email);
+        navigate("/Varifyotp")
 
-        } else {
-            alert(`Failed to send OTP: ${result.message}`);
-            seterror(result.message);
-        }
+      } else {
+        alert(`Failed to send OTP: ${result.message}`);
+        seterror(result.message);
+      }
     } catch (err) {
-        console.log("Error sending OTP:", err);
+      console.log("Error sending OTP:", err);
     }
   };
   return (
@@ -60,7 +60,7 @@ const ForgotPass = () => {
       </div>
     </div>
 
-    
+
   );
 };
 
