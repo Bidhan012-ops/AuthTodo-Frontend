@@ -15,7 +15,7 @@ const Verifyotp = () => {
     console.log("Entered OTP:", otp);
     seterror([]); // Clear previous errors on new attempt
     try {
-      const responce = await fetch(`${BASE_URL}/varifyOtp/${userEmail}`, {
+      const responce = await fetch(`${BASE_URL}/users/varifyOtp/${userEmail}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

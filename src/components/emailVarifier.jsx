@@ -17,7 +17,7 @@ const EmailVarifier = () => {
 
     const verifyEmail = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/verify`, {
+        const response = await fetch(`${BASE_URL}/users/verify`, {
           method: 'POST',
           headers: {
             Authorization: `Bearer ${token}`,
