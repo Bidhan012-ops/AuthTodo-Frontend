@@ -14,12 +14,12 @@ const LandingPage = () => {
                     </a>
                     <div className="flex space-x-3 md:space-x-0 rtl:space-x-reverse gap-4">
                         <Link to="/login">
-                            <button type="button" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">
+                            <button type="button" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors cursor-pointer">
                                 Log In
                             </button>
                         </Link>
                         <Link to="/signup">
-                            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all shadow-lg shadow-blue-500/30">
+                            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all shadow-lg shadow-blue-500/30 cursor-pointer">
                                 Get Started
                             </button>
                         </Link>

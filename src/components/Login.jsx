@@ -85,14 +85,14 @@ const Login = () => {
           <button
             type="button"
             onClick={() => setVisible(!visible)}
-            className="absolute right-2 top-9 text-gray-600"
+            className="absolute right-2 top-9 text-gray-600 cursor-pointer"
           >
             {visible ? <FaRegEye /> : <FaRegEyeSlash />}
           </button>
         </div>
         {/* Login Button */}
         <button
-          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-300"
+          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-300 cursor-pointer"
           onClick={handleLogin}
         >
           Login

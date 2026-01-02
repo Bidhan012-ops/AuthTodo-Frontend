@@ -69,7 +69,7 @@ const ChangePass = () => {
           <button
             type="button"
             onClick={() => setVisible(!visible)}
-            className="absolute right-2 top-9 text-gray-600"
+            className="absolute right-2 top-9 text-gray-600 cursor-pointer"
           >
             {visible ? <FaRegEye /> : <FaRegEyeSlash />}
           </button>
@@ -89,13 +89,13 @@ const ChangePass = () => {
           <button
             type="button"
             onClick={() => setcvisible(!cvisible)}
-            className="absolute right-2 top-9 text-gray-600"
+            className="absolute right-2 top-9 text-gray-600 cursor-pointer"
           >
             {cvisible ? <FaRegEye /> : <FaRegEyeSlash />}
           </button>
         </div>
 
-        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition duration-200" onClick={handleOnclick}>
+        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition duration-200 cursor-pointer" onClick={handleOnclick}>
           Update Password
         </button>
       </div>

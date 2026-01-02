@@ -63,7 +63,7 @@ const Verifyotp = () => {
         {/* Verify Button */}
         <button
           onClick={handleVerify}
-          className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition duration-200"
+          className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition duration-200 cursor-pointer"
         >
           Verify OTP
         </button>

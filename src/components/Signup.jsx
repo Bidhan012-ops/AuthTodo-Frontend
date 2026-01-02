@@ -33,7 +33,7 @@ const Signup = () => {
       if (result.success) {
         setError([]);
         alert("Registration successful! Please verify your email.");
-        navigate('/varifyEmail');
+        navigate('/varifyEmail', { state: { email: data.email } });
       }
       else {
         alert(`Registration failed: ${result.message}`);
@@ -97,7 +97,7 @@ const Signup = () => {
             <button
               type="button"
               onClick={() => setVisible(!visible)}
-              className="absolute right-2 top-9 text-gray-600"
+              className="absolute right-2 top-9 text-gray-600 cursor-pointer"
             >
               {visible ? <FaRegEye /> : <FaRegEyeSlash />}
             </button>
@@ -105,7 +105,7 @@ const Signup = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition"
+            className="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition cursor-pointer"
             onClick={handleFormdata}
           >
             Sign Up
