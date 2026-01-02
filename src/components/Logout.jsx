@@ -16,7 +16,7 @@ const Logout = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch(`${BASE_URL}/logout`, {
+      const response = await fetch(`${BASE_URL}/users/logout`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accessToken}`,
