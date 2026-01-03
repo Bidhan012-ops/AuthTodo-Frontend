@@ -38,6 +38,12 @@ export const getTodos = async () => {
     const data = await response.json();
     if (!response.ok) throw new Error(data.message || data.error || "Failed to fetch todos");
 
+    // Ensure data is an array before mapping
+    if (!Array.isArray(data)) {
+      console.error("Expected an array of todos, but got:", data);
+      return [];
+    }
+
     return data.map(todo => {
       const d = new Date(todo.date);
       return { ...todo, date: d.toLocaleDateString("en-IN") };

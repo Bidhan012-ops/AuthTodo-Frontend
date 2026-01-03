@@ -36,6 +36,7 @@ const ForgotPass = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-sm bg-white rounded-xl shadow-lg p-6">
+        <ErrorComponent error={error} />
         <h2 className="text-2xl font-semibold text-center text-gray-800">
           Forgot Password
         </h2>

@@ -5,6 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
+import ErrorComponent from './ErrorComponent';
 const Signup = () => {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
@@ -50,15 +51,7 @@ const Signup = () => {
         <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">
           Create Account
         </h2>
-        {error.length > 0 && (
-          <div className="mb-4 p-3 bg-red-100 text-red-700 rounded">
-            <ul>
-              {error.map((err, index) => (
-                <li key={index}>{err}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <ErrorComponent error={error} />
         <form className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-600 mb-1">
